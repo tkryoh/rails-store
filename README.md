@@ -1,1 +1,1 @@
-# rails-ec-try
+# rails-store
