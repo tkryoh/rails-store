@@ -1,5 +1,5 @@
 module Product::Notifications
-  extend ActiveSupport: :Concern
+  extend ActiveSupport::Concern
 
   included do
     has_many :subscribers, dependent: :destroy
