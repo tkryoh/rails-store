@@ -6,15 +6,18 @@
       <%= link_to "Email", settings_email_path %>
       <%= link_to "Password", settings_password_path %>
       <%= link_to "Account", settings_user_path %>
-    </nav>
 
-    <% if Current.user.admin? %>
-      <h4>Store Settings</h4>
-      <%= link_to "Users", store_users_path %>
-    <% end %>
+      <% if Current.user.admin? %>
+        <h4>Store Settings</h4>
+        <%= link_to "Products", store_products_path %>
+        <%= link_to "Users", store_users_path %>
+      <% end %>
+    </nav>
 
     <div>
       <%= yield %>
     </div>
   </section>
 <% end %>
+
+<%= render template: "layouts/application" %>
